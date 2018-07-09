@@ -9,7 +9,7 @@ export default class IcePanel extends PureComponent {
     /**
      * 不同状态
      */
-    status: PropTypes.oneOf(['success', 'info', 'warning', 'danger']),
+    status: PropTypes.oneOf(['success', 'info', 'warning', 'danger', 'default']),
     style: PropTypes.object,
     className: PropTypes.string,
   };
