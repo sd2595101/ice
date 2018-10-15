@@ -78,6 +78,46 @@ const baseConfig = {
           name: 'images/[hash].[ext]',
         },
       },
+      {
+        test: /\.woff(\?\S*)?$/,
+        loader: URL_LOADER,
+        options: {
+          limit: 10000,
+          minetype: 'application/font-woff',
+        },
+      },
+      {
+        test: /\.woff2(\?\S*)?$/,
+        loader: URL_LOADER,
+        options: {
+          limit: 10000,
+          minetype: 'application/font-woff',
+        },
+      },
+      {
+        test: /\.ttf(\?\S*)?$/,
+        loader: URL_LOADER,
+        options: {
+          limit: 10000,
+          minetype: 'application/octet-stream',
+        },
+      },
+      {
+        test: /\.eot(\?\S*)?$/,
+        loader: URL_LOADER,
+        options: {
+          limit: 10000,
+          minetype: 'application/vnd.ms-fontobject',
+        },
+      },
+      {
+        test: /\.svg(\?\S*)?$/,
+        loader: URL_LOADER,
+        options: {
+          limit: 10000,
+          minetype: 'image/svg+xml',
+        },
+      },
     ],
   },
 
