@@ -22,6 +22,7 @@ const iceworksClient = require('./iceworksClient');
 const generateRootCA = require('./config/generateRootCA');
 const prepareUrLs = require('./utils/prepareURLs');
 const getProxyConfig = require('./config/getProxyConfig');
+const openBrowser = require('react-dev-utils/openBrowser');
 
 /* eslint no-console:off */
 
@@ -193,6 +194,7 @@ module.exports = async function(args, subprocess) {
           serverUrl: urls.lanUrlForBrowser || urls.localUrlForBrowser,
         },
       });
+      openBrowser(urls.localUrlForBrowser);
     } else {
       // 服务启动完成切没有任务错误与警告
       send({
